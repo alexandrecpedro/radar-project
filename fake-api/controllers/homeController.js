@@ -1,5 +1,5 @@
 module.exports = {
     index: (req, res, next) => {
-        res.render('index', { title: 'Bem-vindo ao projeto Radar' });
+        res.status(200).send({ message: 'Bem-vindo ao projeto Radar' });
     }
 }
