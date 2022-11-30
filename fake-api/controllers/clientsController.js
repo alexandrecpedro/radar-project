@@ -1,17 +1,32 @@
+const Client = require("../models/client");
+
 module.exports = {
     index: async (req, res, next) => {
-        res.status(200).send();
+        const clients = await Client.findClients();
+        res.status(200).send(clients);
     },
     create: (req, res, next) => {
-        res.status(201).send();
+        const client = new Client(req.body);
+        client.id = new Date().getTime();
+        Client.save(client);
+        res.status(201).send(client);
     },
-    update: (req, res, next) => {
-        res.status(200).send();
+    update: async (req, res, next) => {
+        let clientDb = await Client.findClientById(req.params.id);
+        if(!clientDb) return res.status(404).send({ message: "Cliente não encontrado" });
+
+        const client = new Client(req.body);
+        client.id = clientDb.id;
+        Client.save(client);
+        res.status(200).send(client);
     },
     delete: (req, res, next) => {
-        res.status(204).send();
+        Client.deleteById(req.params.id);
+        res.status(204).send("");
     },
-    show: (req, res, next) => {
-        res.status(200).send();
+    show: async (req, res, next) => {
+        let clientDb = await Client.findClientById(req.params.id);
+        if(!clientDb) return res.status(404).send({ message: "Cliente não encontrado" });
+        res.status(200).send(clientDb);
     }
 }
