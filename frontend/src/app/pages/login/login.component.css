@@ -1,0 +1,40 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgrey;
+}
+div{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    padding: 60px;
+    border-radius: 15px;
+}
+input{
+    padding: 15px;
+    font-size: 13px;
+    border-radius: 10px;
+    
+}
+button{
+    background-color: midnightblue;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: royalblue;
+}
+h1{
+    padding-left: 609px;
+    padding-top: 120px;
+}
+p{
+   padding-left: 545px;
+   font-size: 11px;
+}
