@@ -5,9 +5,11 @@ module.exports = {
         const products = await Product.findProducts();
         res.status(200).send(products);
     },
-    create: (req, res, next) => {
+    create: async (req, res, next) => {
         const product = new Product(req.body);
-        product.id = new Date().getTime();
+        const products = await Product.findProducts();
+        // product.id = new Date().getTime();
+        product.id = products.length + 1;
         Product.save(product);
         res.status(201).send(product);
     },
