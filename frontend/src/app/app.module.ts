@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import ptBr from '@angular/common/locales/pt';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,10 +16,10 @@ import { ClientsComponent } from './pages/clients/clients.component';
 import { CashFlowComponent } from './pages/cash-flow/cash-flow.component';
 import { LoginComponent } from './pages/login/login.component';
 
-
 import { CpfFormatPipe } from './pipes/cpf-format/cpf-format.pipe';
 import { PhoneFormatPipe } from './pipes/phone-format/phone-format.pipe';
 
+registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
@@ -37,10 +39,12 @@ import { PhoneFormatPipe } from './pipes/phone-format/phone-format.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-  FormsModule
-  
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
