@@ -5,26 +5,27 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class LoginService {
-  public logado: boolean = false;
+  public logged: boolean = false;
   public adm: boolean = false;
 
   constructor(private router: Router) {
-    this.notificar();
+    this.notify();
   }
 
-  public verificaLogado(): boolean {
-    this.notificar();
-    return this.logado;
+  public verifyLogged(): boolean {
+    this.notify();
+    return this.logged;
   }
 
-  public notificar() {
-    this.logado = localStorage.getItem("logado") ? true : false;
+  public notify() {
+    this.logged = localStorage.getItem("logged") ? true : false;
     this.adm = localStorage.getItem("adm") ? true : false;
   }
-   public deslogar() {
+
+  public logout() {
     localStorage.clear();
-    this.logado = false;
+    this.logged = false;
     this.adm = false;
     this.router.navigateByUrl("/");
-   }
+  }
 }
