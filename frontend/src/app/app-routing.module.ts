@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth/auth.guard';
 import { EditPermissionGuard } from './guards/edit-permission/edit-permission.guard';
+import { FormLeaveGuard } from './guards/form-leave/form-leave.guard';
 import { CashFlowComponent } from './pages/cash-flow/cash-flow.component';
 import { ClientsComponent } from './pages/clients/clients.component';
 import { HomeComponent } from './pages/home/home.component';
