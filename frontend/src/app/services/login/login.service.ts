@@ -1,9 +1,30 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+  public logado: boolean = false;
+  public adm: boolean = false;
 
-  constructor( ) { }
+  constructor(private router: Router) {
+    this.notificar();
+  }
+
+  public verificaLogado(): boolean {
+    this.notificar();
+    return this.logado;
+  }
+
+  public notificar() {
+    this.logado = localStorage.getItem("logado") ? true : false;
+    this.adm = localStorage.getItem("adm") ? true : false;
+  }
+   public deslogar() {
+    localStorage.clear();
+    this.logado = false;
+    this.adm = false;
+    this.router.navigateByUrl("/");
+   }
 }
