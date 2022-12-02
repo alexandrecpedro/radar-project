@@ -5,9 +5,11 @@ module.exports = {
         const clients = await Client.findClients();
         res.status(200).send(clients);
     },
-    create: (req, res, next) => {
+    create: async (req, res, next) => {
         const client = new Client(req.body);
-        client.id = new Date().getTime();
+        const clients = await Client.findClients();
+        // client.id = new Date().getTime();
+        client.id = clients.length + 1;
         Client.save(client);
         res.status(201).send(client);
     },

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,10 @@ import { ProductsComponent } from './pages/products/products.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { ClientsComponent } from './pages/clients/clients.component';
 import { CashFlowComponent } from './pages/cash-flow/cash-flow.component';
+<<<<<<< HEAD
 import { LoginComponent } from './pages/login/login.component';
+=======
+>>>>>>> fa3fe7c877c6a65d1ae4a255cf257ae212a84bcc
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -29,6 +33,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
+=======
+    HttpClientModule,
+>>>>>>> fa3fe7c877c6a65d1ae4a255cf257ae212a84bcc
     FormsModule
   ],
   providers: [],
