@@ -1,14 +1,14 @@
 img{
-    padding-left: 605px;
+    padding-left: 608px;
     padding-top: 10px;
 }
 div{
     background-color: white;
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%,-20%);
-    padding: 20px;
+    padding: 43px;
     border-radius: 15px;
 }
 input{

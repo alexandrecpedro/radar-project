@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
+
 import { ProductsComponent } from './pages/products/products.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { ClientsComponent } from './pages/clients/clients.component';
 import { CashFlowComponent } from './pages/cash-flow/cash-flow.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { CashFlowComponent } from './pages/cash-flow/cash-flow.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent,
+    LoginComponent, 
     ProductsComponent,
     OrdersComponent,
     ClientsComponent,
@@ -26,7 +28,8 @@ import { CashFlowComponent } from './pages/cash-flow/cash-flow.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

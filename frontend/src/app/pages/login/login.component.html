@@ -3,18 +3,22 @@
     <label>Email</label>
     <br>
     <br>
-   <input type="email" placeholder="Email">
+   <input type="email" placeholder="Email" name="email" [(ngModel)]="email">
    <br>
    <br>
    <label>Senha</label>
    <br>
    <br>
-   <input type="password" placeholder="Password">
+   <input type="password" placeholder="Password" name="password" [(ngModel)]="senha">
    <br>
    <br>
-   <button class="btn btn-info">Entrar</button>
- 
- </div>
+   <div *ngIf="mensagem"  class="alert alert-danger" role="alert">
+    {{mensagem}}
+  </div>
+   
+  <button class="btn btn-info" (click)="logar()">Entrar</button>
+    
+ </div> 
  <h1>Sign In</h1>
  <p>
      É necessário entrar com a sua conta para continuar
