@@ -5,10 +5,10 @@ img{
 div{
     background-color: white;
     position: absolute;
-    top: 52%;
+    top: 63%;
     left: 50%;
     transform: translate(-50%,-20%);
-    padding: 43px;
+    padding: 10px;
     border-radius: 15px;
 }
 input{
