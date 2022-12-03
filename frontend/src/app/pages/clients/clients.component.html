@@ -48,7 +48,7 @@
 </div>
 
 <ul>
-    <li *ngFor="let client of clients" (click)="selectClient(client)">
+    <li *ngFor="let client of clients" (click)="delete(client.id)">
         {{client.name}}
     </li>
 </ul>

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/interfaces/product.interface';
+import { ProductObserverService } from 'src/app/services/product/product-observer.service';
 import { ProductService } from 'src/app/services/product/product.service';
 
 @Component({
@@ -10,7 +11,10 @@ import { ProductService } from 'src/app/services/product/product.service';
 })
 export class ProductsComponent implements OnInit{
 
-  constructor(private http: HttpClient){}
+  constructor(
+    private http: HttpClient,
+    private productObserver: ProductObserverService
+    ){}
 
   ngOnInit(): void {
     this.productService = new ProductService(this.http);
@@ -33,12 +37,14 @@ export class ProductsComponent implements OnInit{
       stockQty: this.product.stockQty,
       value: this.product.value
     });
+    this.productObserver.updateQty();
     this.getProducts();
   }
   
   async delete(product: Number){
     await this.productService.deleteProduct(product)
     this.products = await this.productService.getProduct();
+    this.productObserver.updateQty();
   }
 
   selectProduct(producte: Product){
