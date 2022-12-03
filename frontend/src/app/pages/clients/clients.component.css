@@ -131,17 +131,16 @@ nav ul {
   color: #fff;
 }
 
-.icon {
-  padding-right: 0.6rem;
-}
 
-.edit {
+.icon-actions{
   align-items: center;
   display: flex;
-  justify-content: center;
   cursor: pointer;
 }
 
+.icon-actions .icon {
+  margin-left: 1rem;
+}
 .checkbtn {
   margin-bottom: 10px;
   background-color: transparent;

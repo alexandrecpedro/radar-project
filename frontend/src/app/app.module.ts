@@ -20,8 +20,13 @@ import { CpfFormatPipe } from './pipes/cpf-format/cpf-format.pipe';
 import { PhoneFormatPipe } from './pipes/phone-format/phone-format.pipe';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormDialogComponent } from './components/form-dialog/form-dialog.component';
 
 registerLocaleData(ptBr);
+
 
 @NgModule({
   declarations: [
@@ -35,14 +40,17 @@ registerLocaleData(ptBr);
     ClientsComponent,
     CashFlowComponent,
     CpfFormatPipe,
-    PhoneFormatPipe
+    PhoneFormatPipe,
+    FormDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },

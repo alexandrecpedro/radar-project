@@ -1,19 +1,20 @@
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+
+
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
 import { Client } from 'src/app/interfaces/client.interface';
 import { ClientObserverService } from 'src/app/services/client/client-observer.service';
 import { ClientService } from 'src/app/services/client/client.service';
 
-import { faCirclePlus, faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { MatDialog } from '@angular/material/dialog';
-import { FormDialogComponent } from 'src/app/components/form-dialog/form-dialog.component';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.css']
+  selector: 'app-form-dialog',
+  templateUrl: './form-dialog.component.html',
+  styleUrls: ['./form-dialog.component.css']
 })
-export class ClientsComponent implements OnInit{
+export class FormDialogComponent {
 
   constructor(
     private http:HttpClient,
@@ -69,13 +70,5 @@ export class ClientsComponent implements OnInit{
         console.log(update);
     }
   }
-
-  openDialog(){
-    this.dialogRef.open(FormDialogComponent,{
-    });
-  }
-
-  faPenToSquare = faPenToSquare;
-  faCirclePlus = faCirclePlus;
-  faTrashCan = faTrashCan;
+  faXmark = faXmark;
 }
