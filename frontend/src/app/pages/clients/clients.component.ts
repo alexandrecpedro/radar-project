@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Client } from 'src/app/interfaces/client.interface';
+import { ClientObserverService } from 'src/app/services/client/client-observer.service';
 import { ClientService } from 'src/app/services/client/client.service';
 
 @Component({
@@ -10,7 +11,10 @@ import { ClientService } from 'src/app/services/client/client.service';
 })
 export class ClientsComponent implements OnInit{
 
-  constructor(private http:HttpClient){}
+  constructor(
+    private http:HttpClient, 
+    private clientObserver: ClientObserverService
+    ){}
 
   ngOnInit(): void {
     this.clientService = new ClientService(this.http)
@@ -41,11 +45,13 @@ export class ClientsComponent implements OnInit{
       numero: this.client.numero
     });
     this.getClients();
+    this.clientObserver.updateQty();
   }
   
   async delete(client: Number){
     await this.clientService.deleteClient(client)
     this.clients = await this.clientService.getClient();
+    this.clientObserver.updateQty();
   }
 
   selectClient(cliente: Client){

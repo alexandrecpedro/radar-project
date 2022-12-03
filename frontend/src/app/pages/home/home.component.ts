@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ClientObserverService } from 'src/app/services/client/client-observer.service';
+import { ProductObserverService } from 'src/app/services/product/product-observer.service';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,5 @@ import { ClientObserverService } from 'src/app/services/client/client-observer.s
 })
 export class HomeComponent {
 
-    constructor(public clientObserver: ClientObserverService){}
+    constructor(public clientObserver: ClientObserverService, public productObserver: ProductObserverService){}
 }

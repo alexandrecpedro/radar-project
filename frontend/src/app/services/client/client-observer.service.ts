@@ -9,6 +9,7 @@ export class ClientObserverService {
 
   constructor(private http: HttpClient) {
     this.updateQty();
+   
  }
 
 public clientQty: Number = 0;
@@ -16,6 +17,6 @@ public clientQty: Number = 0;
 async updateQty(){
   let list = await new ClientService(this.http).getClient();
   this.clientQty = list ? list.length : 0;
-
+  console.log('entro c')
 }
 }
