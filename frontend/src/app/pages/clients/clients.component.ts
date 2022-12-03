@@ -4,6 +4,8 @@ import { Client } from 'src/app/interfaces/client.interface';
 import { ClientObserverService } from 'src/app/services/client/client-observer.service';
 import { ClientService } from 'src/app/services/client/client.service';
 
+import { faCirclePlus, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
@@ -12,7 +14,7 @@ import { ClientService } from 'src/app/services/client/client.service';
 export class ClientsComponent implements OnInit{
 
   constructor(
-    private http:HttpClient, 
+    private http:HttpClient,
     private clientObserver: ClientObserverService
     ){}
 
@@ -47,7 +49,7 @@ export class ClientsComponent implements OnInit{
     this.getClients();
     this.clientObserver.updateQty();
   }
-  
+
   async delete(client: Number){
     await this.clientService.deleteClient(client)
     this.clients = await this.clientService.getClient();
@@ -65,4 +67,6 @@ export class ClientsComponent implements OnInit{
     }
   }
 
+  faPenToSquare = faPenToSquare;
+  faCirclePlus = faCirclePlus;
 }

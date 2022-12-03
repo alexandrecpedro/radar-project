@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'clients', component: ClientsComponent, canActivate: [AuthGuard] },
   {
-    path: 'clients/:id', 
+    path: 'clients/:id',
     canActivateChild: [EditPermissionGuard],
     children: [
       { path: '', redirectTo: 'update', pathMatch: 'full' },
@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   { path: 'orders', component: OrdersComponent, canActivate: [AuthGuard] },
   {
-    path: 'orders/:id', 
+    path: 'orders/:id',
     canActivateChild: [EditPermissionGuard],
     children: [
       { path: '', redirectTo: 'update', pathMatch: 'full' },
@@ -33,7 +33,7 @@ const routes: Routes = [
   },
   { path: 'products', component: ProductsComponent, canActivate: [AuthGuard] },
   {
-    path: 'products/:id', 
+    path: 'products/:id',
     canActivateChild: [EditPermissionGuard],
     children: [
       { path: '', redirectTo: 'update', pathMatch: 'full' },

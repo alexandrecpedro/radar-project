@@ -19,6 +19,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { CpfFormatPipe } from './pipes/cpf-format/cpf-format.pipe';
 import { PhoneFormatPipe } from './pipes/phone-format/phone-format.pipe';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -27,7 +29,7 @@ registerLocaleData(ptBr);
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent, 
+    LoginComponent,
     ProductsComponent,
     OrdersComponent,
     ClientsComponent,
@@ -39,7 +41,8 @@ registerLocaleData(ptBr);
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
