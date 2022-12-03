@@ -8,8 +8,8 @@ module.exports = {
     create: async (req, res, next) => {
         const client = new Client(req.body);
         const clients = await Client.findClients();
-        // client.id = new Date().getTime();
-        client.id = clients.length + 1;
+        client.id = new Date().getTime();
+        // client.id = clients.length + 1;
         Client.save(client);
         res.status(201).send(client);
     },
