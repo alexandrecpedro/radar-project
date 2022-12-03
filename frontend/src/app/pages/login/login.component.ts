@@ -1,4 +1,4 @@
-import { Component , OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 
 @Component({
@@ -7,28 +7,26 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
- 
-  constructor(private router:Router) {}
+  public email: String = "";
+  public senha: String = "";
+  public mensagem: String = "";
+
+  constructor(private router: Router) { }
+
   ngOnInit(): void {
-      
   }
 
-  public email:String = ""
-  public senha:String = ""
-  public mensagem:String = ""
-
-  logar(){
+  logar() {
     console.log(this.email)
-    if(this.email === "radar@login.com" && this.senha === "12345"){
-      localStorage.setItem("logged", "true")
-      this.router.navigateByUrl("/home")
-      
+    if (this.email === "radar@login.com" && this.senha === "12345") {
+      localStorage.setItem("logged", "true");
+      this.router.navigateByUrl("/");
     }
-    
-     else{
+
+    else {
       this.mensagem = "Usuário ou senha inválidos"
       this.email = ""
       this.senha = ""
-     } 
-    }    
+    }
+  }
 }
