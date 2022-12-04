@@ -7,6 +7,7 @@ import { ClientService } from 'src/app/services/client/client.service';
 import { faCirclePlus, faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { MatDialog } from '@angular/material/dialog';
 import { FormDialogComponent } from 'src/app/components/form-dialog/form-dialog.component';
+import { UpdateFormComponent } from 'src/app/components/update-form/update-form.component';
 
 @Component({
   selector: 'app-clients',
@@ -18,7 +19,7 @@ export class ClientsComponent implements OnInit{
   constructor(
     private http:HttpClient,
     private clientObserver: ClientObserverService,
-    private dialogRef : MatDialog
+    private dialogRef : MatDialog,
     ){}
 
   ngOnInit(): void {
@@ -34,45 +35,20 @@ export class ClientsComponent implements OnInit{
     this.clients = await this.clientService.getClient();
   }
 
-  create(){
-    this.clientService.createClient({
-      id: 0,
-      name: this.client.name,
-      bairro: this.client.bairro,
-      cep: this.client.cep,
-      cidade: this.client.cidade,
-      complemento: this.client.complemento,
-      cpf: this.client.cpf,
-      email: this.client.email,
-      estado: this.client.estado,
-      phone: this.client.phone,
-      logradouro: this.client.logradouro,
-      numero: this.client.numero
-    });
-    this.getClients();
-    this.clientObserver.updateQty();
-  }
-
   async delete(client: Number){
     await this.clientService.deleteClient(client)
     this.clients = await this.clientService.getClient();
     this.clientObserver.updateQty();
   }
 
-  selectClient(cliente: Client){
-    this.client = cliente;
-  }
-
-  async save(){
-    if(this.client.id && this.client.id != 0){
-        const update = await this.clientService.updateClient(this.client);
-        console.log(update);
-    }
-  }
-
-  openDialog(){
+  openDialogForm(){
     this.dialogRef.open(FormDialogComponent,{
     });
+  }
+
+  openUpdateForm(client : Client){
+     const dialogRef = this.dialogRef.open(UpdateFormComponent);
+     dialogRef.componentInstance.client = client;
   }
 
   faPenToSquare = faPenToSquare;

@@ -7,7 +7,7 @@ import { Client } from 'src/app/interfaces/client.interface';
 import { ClientObserverService } from 'src/app/services/client/client-observer.service';
 import { ClientService } from 'src/app/services/client/client.service';
 
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-form-dialog',
@@ -52,16 +52,7 @@ export class FormDialogComponent {
     });
     this.getClients();
     this.clientObserver.updateQty();
-  }
-
-  async delete(client: Number){
-    await this.clientService.deleteClient(client)
-    this.clients = await this.clientService.getClient();
-    this.clientObserver.updateQty();
-  }
-
-  selectClient(cliente: Client){
-    this.client = cliente;
+    location.reload();
   }
 
   async save(){
@@ -71,4 +62,5 @@ export class FormDialogComponent {
     }
   }
   faXmark = faXmark;
+  faUsers = faUsers;
 }

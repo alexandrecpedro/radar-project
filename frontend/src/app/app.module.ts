@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormDialogComponent } from './components/form-dialog/form-dialog.component';
+import { UpdateFormComponent } from './components/update-form/update-form.component';
 
 registerLocaleData(ptBr);
 
@@ -41,7 +42,8 @@ registerLocaleData(ptBr);
     CashFlowComponent,
     CpfFormatPipe,
     PhoneFormatPipe,
-    FormDialogComponent
+    FormDialogComponent,
+    UpdateFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,7 @@ registerLocaleData(ptBr);
     FormsModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },

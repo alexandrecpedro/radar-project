@@ -51,7 +51,7 @@
 <div class="container">
   <div class="sub-header">
     <h1 class="client">Clientes</h1>
-    <button class="btn btn-primary" (click)="openDialog()">
+    <button class="btn btn-primary" (click)="openDialogForm()">
       <fa-icon class="icon" [icon]="faCirclePlus" size="lg"></fa-icon>
       Adicionar cliente
     </button>
@@ -96,7 +96,9 @@
             </td>
             <td>
               <div class="icon-actions">
-                <fa-icon [icon]="faPenToSquare" size="lg"></fa-icon>
+                <div (click)="openUpdateForm(client)">
+                  <fa-icon [icon]="faPenToSquare" size="lg"></fa-icon>
+                </div>
                 <div (click)="delete(client.id)">
                   <fa-icon class="icon" [icon]="faTrashCan" size="lg"></fa-icon>
                 </div>
@@ -128,13 +130,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-<!-- <ul>
-    <li *ngFor="let client of clients" (click)="delete(client.id)">
-        {{client.name}}
-        {{client.cpf}}
-    </li>
-</ul> -->
