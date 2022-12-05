@@ -1,0 +1,21 @@
+<div class="container p-5">
+    <h3 class="text-center mb-3">Selecione um produto</h3>
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let product of products">
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title text-truncate">{{product.name}}</h5>
+                    <p class="card-text text-truncate">{{product.description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Estoque: {{product.stockQty}}</li>
+                    <li class="list-group-item">Valor: <span class="">{{product.value | currency}}</span></li>
+                  </ul>
+                  <div class="card-body">
+                    <a class="btn btn-primary" (click)="selectProduct(product)">Adicionar</a>
+                    <a routerLink="/products/{{product.id}}" class="card-link ms-2">Ver produto</a>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

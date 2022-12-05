@@ -25,6 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormDialogComponent } from './components/form-dialog/form-dialog.component';
 import { UpdateFormComponent } from './components/update-form/update-form.component';
+import { ProductDialogComponent } from './components/product-dialog/product-dialog.component';
+import { ClientDialogComponent } from './components/client-dialog/client-dialog.component';
 
 registerLocaleData(ptBr);
 
@@ -44,6 +46,8 @@ registerLocaleData(ptBr);
     PhoneFormatPipe,
     FormDialogComponent,
     UpdateFormComponent,
+    ProductDialogComponent,
+    ClientDialogComponent,
   ],
   imports: [
     BrowserModule,
