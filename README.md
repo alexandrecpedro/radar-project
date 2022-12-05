@@ -143,7 +143,7 @@ As seguintes tecnologias foram utilizadas para construção do projeto:<br><br>
             </li>
             <li &nbsp;>Run
               <ul>
-                <li>npm run dev</li>
+                <li>ng serve</li>
               </ul>
             </li>
           </ol>
