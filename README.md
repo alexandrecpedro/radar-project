@@ -2,9 +2,10 @@
 ## Grupo 1
 ### Equipe
 
-| [![Alexandre da Costa Pedro](https://media-exp1.licdn.com/dms/image/D4D03AQH-U0kZo4Di6w/profile-displayphoto-shrink_800_800/0/1670280075829?e=1675900800&v=beta&t=jutyj8eqE_CGOkWg9KLMRYl27BumHB_3isofqOLY6tY "Alexandre da Costa Pedro")](https://www.linkedin.com/in/alexandre-da-costa-pedro-a319b62b/ "Alexandre da Costa Pedro")  | [![Gabriel Gualberto de Oliveira](https://media-exp1.licdn.com/dms/image/C4D03AQFYvAC-V__hJw/profile-displayphoto-shrink_800_800/0/1600299731633?e=1675900800&v=beta&t=zjYzNCFX27hzoRYe8kjXYepiRe9j0vbWAPRes5icnfk "Gabriel Gualberto de Oliveira")](https://www.linkedin.com/in/ggualberto/ "Gabriel Gualberto de Oliveira")  | [![Jonathan Oliveira Avelino](https://media-exp1.licdn.com/dms/image/C4D03AQGZGH2Ni3zGJQ/profile-displayphoto-shrink_800_800/0/1660338651176?e=1675900800&v=beta&t=s-zqu5Z07SRcXPNR3nGjSqZFXyptmr3dRCaJlhx4wsQ "Jonathan Oliveira Avelino")](https://www.linkedin.com/in/jonathan-avelino/ "Jonathan Oliveira Avelino")  | [![Hugo Nunes](https://media-exp1.licdn.com/dms/image/D4D03AQFqcrh5cCZ0yA/profile-displayphoto-shrink_200_200/0/1667692186260?e=1675900800&v=beta&t=V6ad5AuSTFJc4tTrXbIKoj-jFylex2g6EFsZXITxqzo "Hugo Nunes")](https://www.linkedin.com/in/hugo-nunes-323a41164/ "Hugo Nunes")  | [![Luís Eduardo](https://avatars.githubusercontent.com/u/117494775?v=4 "Luís Eduardo")](https://github.com/luisedu24 "Luís Eduardo")  | [![Silvia Helena Souza](https://avatars.githubusercontent.com/u/117491113?v=4 "Silvia Helena Souza")](https://www.linkedin.com/in/silvia-helena-s-94512a57/ "Silvia Helena Souza")  |
-| :------------: | :------------: | :------------: | :------------: | :------------: |
-| Alexandre Pedro  | Gabriel Gualberto  |  Jonathan Oliveira |  Hugo Nunes | Luís Eduardo  | Silvia Helena Souza  |
+| :------------: | :------------: | :------------: | :------------: | :------------: | :------------: |
+| [![Alexandre da Costa Pedro](https://media-exp1.licdn.com/dms/image/D4D03AQH-U0kZo4Di6w/profile-displayphoto-shrink_200_200/0/1670280075829?e=1675900800&v=beta&t=AKOYkuCpQdMekwT9f-g3WbEbDUtOTk8GnUiq8qKocM4 "Alexandre da Costa Pedro")](https://www.linkedin.com/in/alexandre-da-costa-pedro-a319b62b/ "Alexandre da Costa Pedro")  | [![Gabriel Gualberto de Oliveira](https://media-exp1.licdn.com/dms/image/C4D03AQFYvAC-V__hJw/profile-displayphoto-shrink_200_200/0/1600299731633?e=1675900800&v=beta&t=B1uCN7kHQ63HDhy645OFAHkcoX3QnA5SENA3sEKkB30 "Gabriel Gualberto de Oliveira")](https://www.linkedin.com/in/ggualberto/ "Gabriel Gualberto de Oliveira")  | [![Jonathan Oliveira Avelino](https://media-exp1.licdn.com/dms/image/C4D03AQGZGH2Ni3zGJQ/profile-displayphoto-shrink_200_200/0/1660338651176?e=1675900800&v=beta&t=u31mBVurDRhQ9ezqd84Kb2ChNYhoTky1N9qzA2I_YLw "Jonathan Oliveira Avelino")](https://www.linkedin.com/in/jonathan-avelino/ "Jonathan Oliveira Avelino")  | [![Hugo Nunes](https://media-exp1.licdn.com/dms/image/D4D03AQFqcrh5cCZ0yA/profile-displayphoto-shrink_200_200/0/1667692186260?e=1675900800&v=beta&t=V6ad5AuSTFJc4tTrXbIKoj-jFylex2g6EFsZXITxqzo "Hugo Nunes")](https://www.linkedin.com/in/hugo-nunes-323a41164/ "Hugo Nunes")  | [![Luís Eduardo](https://avatars.githubusercontent.com/u/117494775?v=4 "Luís Eduardo")](https://github.com/luisedu24 "Luís Eduardo")  | [![Silvia Helena Souza](https://media-exp1.licdn.com/dms/image/C4D03AQGSwhhxnDvNsQ/profile-displayphoto-shrink_200_200/0/1651505804698?e=1675900800&v=beta&t=ZhzsJZ9CPc1cFNDlXFXAcK_rsBtid4b6RVOU3U_dDzg "Silvia Helena Souza")](https://www.linkedin.com/in/silvia-helena-s-94512a57/ "Silvia Helena Souza")  |
+
+| Alexandre Pedro  | Gabriel Gualberto  | Jonathan Oliveira  | Hugo Nunes  | Luís Eduardo  | Silvia Souza  |
 
 <div align = "center">
   <h1> Projeto Radar </h1>
@@ -12,7 +13,7 @@
 <br>
 
 <div align = 'center' justify-content = 'space-around' >
-  <img width="1604" alt=" NLW World Cup - Desktop" src="./project/screens/screen1.png">
+  <img width="1604" alt=" NLW World Cup - Desktop" src="./frontend/src/assets/screens/screen1.png">
 </div>
 <br>
 <br>
