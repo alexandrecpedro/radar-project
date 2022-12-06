@@ -26,27 +26,27 @@
   </thead>
   <tbody>
     <tr>
-      <td>Página de login</td>
+      <td align = 'center'>Página de login</td>
       <td><img width="1604" alt=" Página de Login" src="./frontend/src/assets/screens/login.png"></td>
     </tr>
     <tr>
-      <td>Página Home</td>
+      <td align = 'center'>Página Home</td>
       <td><img width="1604" alt=" Página Home" src="./frontend/src/assets/screens/home.png"></td>
     </tr>
     <tr>
-      <td>Página de cadastro de produtos</td>
+      <td align = 'center'>Página de cadastro de produtos</td>
       <td><img width="1604" alt=" Página de cadastro de produtos" src="./frontend/src/assets/screens/produtos.png"></td>
     </tr>
     <tr>
-      <td>Página cadastro de clientes</td>
+      <td align = 'center'>Página cadastro de clientes</td>
       <td><img width="1604" alt=" Página cadastro de clientes" src="./frontend/src/assets/screens/Clientes.png"></td>
     </tr>
     <tr>
-      <td>Página cadastro de pedidos dos clientes</td>
+      <td align = 'center'>Página cadastro de pedidos dos clientes</td>
       <td><img width="1604" alt=" Página cadastro de pedidos dos clientes" src="./frontend/src/assets/screens/pedidos.png"></td>
     </tr>
     <tr>
-      <td>Página de fluxo de caixa, mostrando a movimentação do mês</td>
+      <td align = 'center'>Página de fluxo de caixa, mostrando a movimentação do mês</td>
       <td><img width="1604" alt=" Página de fluxo de caixa, mostrando a movimentação do mês" src="./frontend/src/assets/screens/fluxo.png"></td>
     </tr>
   </tbody>
