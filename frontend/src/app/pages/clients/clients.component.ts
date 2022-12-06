@@ -18,9 +18,10 @@ export class ClientsComponent implements OnInit{
 
   constructor(
     private http:HttpClient,
-    private clientObserver: ClientObserverService,
+    public clientObserver: ClientObserverService,
     private dialogRef : MatDialog,
     ){}
+
 
   ngOnInit(): void {
     this.clientService = new ClientService(this.http)

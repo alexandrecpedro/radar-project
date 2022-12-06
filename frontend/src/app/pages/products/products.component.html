@@ -1,30 +1,79 @@
 <div class="container">
-    <form class="row g-3" novalidate>
-        <div class="col-md-4">
-          <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="nome"  name="nome" [(ngModel)]="product.name">
-        </div>
-        <div class="col-md-4">
-          <label for="description" class="form-label">Descrição</label>
-          <input type="text" class="form-control" id="description"  name="description" [(ngModel)]="product.description">
-        </div>
-        <div class="col-md-4">
-          <label for="value" class="form-label">Valor</label>
-            <input type="text" class="form-control" id="value" name="value" [(ngModel)]="product.value">
-        </div>
-        <div class="col-md-6">
-          <label for="stockqty" class="form-label">Quantidade em Estoque</label>
-          <input type="text" class="form-control" id="stockqty" name="stockqty" [(ngModel)]="product.stockQty">
-        </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="button" (click)="create()">Submit form</button>
-          <button class="btn btn-primary" type="button" (click)="save()">Salvar Alteracao</button>
-        </div>
-      </form>
+  <div class="sub-header">
+    <h1 class="client">Produtos</h1>
+    <button class="btn btn-primary" (click)="openDialogForm()">
+      <fa-icon class="icon" [icon]="faCirclePlus" size="lg"></fa-icon>
+      Adicionar Produto
+    </button>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="tableContainer">
+    <div class="subContainer">
+      <table class="table">
+        <thead>
+          <tr>
+            <td>Nome</td>
+            <td>Descrição</td>
+            <td>Valor(R$)</td>
+            <td>Quant. em estoque </td>
+            <td>Ações</td>
+          </tr>
+        </thead>
+        <tbody *ngFor="let product of products">
+          <tr>
+            <td>
+              <div>
+                <div>
+                  <p class="id-object"></p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span>{{product.name}}</span>
+            </td>
+            <td>
+              <span>{{product.value}}</span>
+            </td>
+            <td>
+              <span>{{product.stockQty}}</span>
+            </td>
+            <td>
+              <div class="icon-actions">
+                <div (click)="openUpdateForm(product)">
+                  <fa-icon [icon]="faPenToSquare" size="lg"></fa-icon>
+                </div>
+                <div (click)="delete(product.id)">
+                  <fa-icon class="icon" [icon]="faTrashCan" size="lg"></fa-icon>
+                </div>
+              </div>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tabbleFooter">
+      <div class="pagination">
+        <span>mostrando 1 - 10 de 45</span>
+        <nav>
+          <ul>
+            <li class="arrows">
+            </li>
+            <li class="numberSelected">1</li>
+            <li class="number">2</li>
+            <li class="number">3</li>
+            <li class="number">4</li>
+            <li class="number">5</li>
+            <li class="arrows">
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>
 
-<ul>
-    <li *ngFor="let product of products" (click)="delete(product.id)">
-        {{product.name}} - {{product.stockQty}}
-    </li>
-</ul>

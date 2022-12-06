@@ -3,20 +3,24 @@ img{
     padding-top: 10px;
 }
 div{
-    background-color: white;
+    background-color: rgba(223, 223, 223, 0.747);
     position: absolute;
-    top: 63%;
+    top: 67%;
     left: 50%;
     transform: translate(-50%,-20%);
-    padding: 10px;
+    padding: 30px;
     border-radius: 15px;
 }
 input{
     padding: 15px;
     font-size: 13px;
     border-radius: 10px;
-    
+    border: none;
 }
+
+ input:focus-visible {
+    outline: 1px solid rgb(123, 80, 240);
+  }
 button{
     background-color: midnightblue; 
     border: none;

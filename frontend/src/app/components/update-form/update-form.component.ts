@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router  } from '@angular/router';
+import { MatDialogRef } from '@angular/material/dialog';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Client } from 'src/app/interfaces/client.interface';
 import { ClientService } from 'src/app/services/client/client.service';
@@ -12,17 +13,22 @@ import { ClientService } from 'src/app/services/client/client.service';
 })
 export class UpdateFormComponent implements OnInit{
 
-private clientService:ClientService = {} as ClientService;
-  public client:Client = {} as Client;
-  public clientbyId: Client | undefined= {} as Client;
+  
   
   constructor(
     private router:Router,
     private routerParams: ActivatedRoute,
-    private http: HttpClient
+    private http: HttpClient, 
+    public dialogRef: MatDialogRef<UpdateFormComponent>,
     ){}
 
-  selectClient(cliente: Client){
+
+  private clientService: ClientService = {} as ClientService;
+  public clients: Client[] | undefined = [];
+  public client: Client = {} as Client;
+  public clientbyId: Client | undefined= {} as Client;
+
+  selectClient(cliente: Client) {
     this.client = cliente;
   }
 
@@ -49,6 +55,10 @@ private clientService:ClientService = {} as ClientService;
       this.getClient(id);
     }
   }
+  closeDialog(): void {
+    this.dialogRef.close();
+  }
+
   faXmark = faXmark;
 }
 
