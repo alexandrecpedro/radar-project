@@ -19,12 +19,12 @@
 <div align = 'center' justify-content = 'space-around' >
 | Descrição da imagem | Tela |
 | :------------: | :------------: |
-| Página de login | <img width="800" alt=" Página de Login" src="./frontend/src/assets/screens/login.png"> |
-| Página home | <img width="800" alt=" Página Home" src="./frontend/src/assets/screens/home.png"> |
-| Página de cadastro de produtos | <img width="800" alt=" Página de cadastro de produtos" src="./frontend/src/assets/screens/produtos.png"> |
-| Página cadastro de clientes | <img width="800" alt=" Página cadastro de clientes" src="./frontend/src/assets/screens/Clientes.png"> |
-| Página cadastro de pedidos dos clientes | <img width="800" alt=" Página cadastro de pedidos dos clientes" src="./frontend/src/assets/screens/pedidos.png"> |
-| Página de fluxo de caixa, mostrando a movimentação do mês | <img width="800" alt=" Página de fluxo de caixa, mostrando a movimentação do mês" src="./frontend/src/assets/screens/fluxo.png"> |
+| Página de login | <img width="600px" alt=" Página de Login" src="./frontend/src/assets/screens/login.png"> |
+| Página home | <img width="600px" alt=" Página Home" src="./frontend/src/assets/screens/home.png"> |
+| Página de cadastro de produtos | <img width="600px" alt=" Página de cadastro de produtos" src="./frontend/src/assets/screens/produtos.png"> |
+| Página cadastro de clientes | <img width="600px" alt=" Página cadastro de clientes" src="./frontend/src/assets/screens/Clientes.png"> |
+| Página cadastro de pedidos dos clientes | <img width="600px" alt=" Página cadastro de pedidos dos clientes" src="./frontend/src/assets/screens/pedidos.png"> |
+| Página de fluxo de caixa, mostrando a movimentação do mês | <img width="600px" alt=" Página de fluxo de caixa, mostrando a movimentação do mês" src="./frontend/src/assets/screens/fluxo.png"> |
 </div>
 <br>
 <br>
