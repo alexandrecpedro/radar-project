@@ -29,7 +29,8 @@
   <a href="#target">Objetivo</a> •
   <a href="#technologies">Tecnologias utilizadas</a> •
   <a href="#development">Desenvolvimento</a> •
-  <a href="#howtouse">Como utilizar</a>
+  <a href="#howtouse">Como utilizar</a> •
+  <a href="#greetings">Agradecimentos</a>
 </p>
 <br>
 
@@ -179,4 +180,9 @@ As seguintes tecnologias foram utilizadas para construção do projeto:<br><br>
       </ul>
     </li>
   </ol>
+</div>
+
+<div id="greetings">
+<h2> 🤝 Agradecimentos </h2>
+<p> Agradecemos à Febrafar/Farmarcas pela oportunidade de participarmos desta bela iniciativa que é o programa de treinamento Código do Futuro, que proporciona a ampliação de conhecimentos e de qualificação na área de desenvolvimento Full Stack - Frontend e Backend (Angular, C#/DotNet). </p>
 </div>
