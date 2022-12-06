@@ -1,4 +1,4 @@
-img{
+/* img{
     padding-left: 608px;
     padding-top: 10px;
 }
@@ -41,4 +41,19 @@ h1{
 p{
    padding-left: 580px;
    font-size: 9px;
+} */
+.form {
+    background-color: #F8F9FA;
+    border-radius: 10px;
+    width: 600px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.btn {
+    background-color: #4E46B4;
+    color: #F8F9FA;
 }

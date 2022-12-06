@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   public senha: String = "";
   public mensagem: String = "";
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
     if (this.email === "radar@login.com" && this.senha === "12345") {
       localStorage.setItem("logged", "true");
       localStorage.setItem("adm", "true");
-      this.router.navigateByUrl('pedidos');
+      this.loginService.notify();
+      this.router.navigateByUrl('');
     
     }
 
