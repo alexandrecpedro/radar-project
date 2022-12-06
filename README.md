@@ -17,9 +17,8 @@
 <br>
 
 <div align = 'center' justify-content = 'space-around' >
-| Descrição da imagem | Tela |
 | :------------: | :------------: |
-| Página de login | <img width="1604" alt=" Página de Login" src="./frontend/src/assets/screens/login.png"> |
+| Página de login | <img width="1604px" alt=" Página de Login" src="./frontend/src/assets/screens/login.png"> |
 | Página home | <img width="1604" alt=" Página Home" src="./frontend/src/assets/screens/home.png"> |
 | Página de cadastro de produtos | <img width="1604" alt=" Página de cadastro de produtos" src="./frontend/src/assets/screens/produtos.png"> |
 | Página cadastro de clientes | <img width="1604" alt=" Página cadastro de clientes" src="./frontend/src/assets/screens/Clientes.png"> |
