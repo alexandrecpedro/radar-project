@@ -1,53 +1,3 @@
-<!-- <div class="container">
-  <form class="row g-3" novalidate>
-      <div class="col-md-4">
-        <label for="nome" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="nome"  name="nome" [(ngModel)]="client.name">
-      </div>
-      <div class="col-md-4">
-        <label for="telefone" class="form-label">Telefone</label>
-        <input type="text" class="form-control" id="telefone"  name="telefone" [(ngModel)]="client.phone">
-      </div>
-      <div class="col-md-4">
-        <label for="cpf" class="form-label">Cpf</label>
-          <input type="text" class="form-control" id="cpf" name="cpf" [(ngModel)]="client.cpf">
-      </div>
-      <div class="col-md-6">
-        <label for="Cidade" class="form-label">Cidade</label>
-        <input type="text" class="form-control" id="cidade" name="cidade" [(ngModel)]="client.cidade">
-      </div>
-      <div class="col-md-3">
-          <label for="estado" class="form-label">estado</label>
-          <input type="text" class="form-control" id="estado" name="estado" [(ngModel)]="client.estado">
-        </div>
-      <div class="col-md-3">
-        <label for="cep" class="form-label">CEP</label>
-        <input type="text" class="form-control" id="cep" name="cep" [(ngModel)]="client.cep">
-      </div>
-      <div class="col-md-3">
-          <label for="logradouro" class="form-label">Logradouro</label>
-          <input type="text" class="form-control" id="logradouro" name="logradouro" [(ngModel)]="client.logradouro">
-      </div>
-      <div class="col-md-3">
-          <label for="numero" class="form-label">numero</label>
-          <input type="number" class="form-control" id="numero" name="numero" [(ngModel)]="client.numero">
-      </div>
-      <div class="col-md-3">
-          <label for="bairro" class="form-label">bairro</label>
-          <input type="text" class="form-control" id="bairro" name="bairro" [(ngModel)]="client.bairro">
-      </div>
-      <div class="col-md-3">
-          <label for="complemento" class="form-label">complemento</label>
-          <input type="text" class="form-control" id="complemento" name="complemento" [(ngModel)]="client.complemento">
-      </div>
-      <div class="col-12">
-        <button class="btn btn-primary" type="button" (click)="create()">Submit form</button>
-        <button class="btn btn-primary" type="button" (click)="save()">Salvar Alteracao</button>
-      </div>
-    </form>
-</div> -->
-
-
 <div class="container">
   <div class="sub-header">
     <h1 class="client">Clientes</h1>
@@ -57,8 +7,8 @@
     </button>
   </div>
 
-  <span>
-    12 clientes
+  <span class="strong">
+    Total: {{clientObserver.clientQty}}
   </span>
   <br>
   <br>

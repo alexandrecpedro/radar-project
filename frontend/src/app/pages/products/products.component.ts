@@ -4,6 +4,11 @@ import { Product } from 'src/app/interfaces/product.interface';
 import { ProductObserverService } from 'src/app/services/product/product-observer.service';
 import { ProductService } from 'src/app/services/product/product.service';
 
+import { faCirclePlus, faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductFormDialogComponent } from 'src/app/components/product-form-dialog/product-form-dialog.component';
+import { DetailProductDialogComponent } from 'src/app/components/detail-product-dialog/detail-product-dialog.component';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -13,7 +18,8 @@ export class ProductsComponent implements OnInit{
 
   constructor(
     private http: HttpClient,
-    private productObserver: ProductObserverService
+    private productObserver: ProductObserverService,
+    private dialogRef : MatDialog,
     ){}
 
   ngOnInit(): void {
@@ -40,7 +46,7 @@ export class ProductsComponent implements OnInit{
     this.productObserver.updateQty();
     this.getProducts();
   }
-  
+
   async delete(product: Number){
     await this.productService.deleteProduct(product)
     this.products = await this.productService.getProduct();
@@ -51,10 +57,17 @@ export class ProductsComponent implements OnInit{
     this.product = producte;
   }
 
-  async save(){
-    if(this.product.id && this.product.id != 0){
-        const update = await this.productService.updateProduct(this.product);
-        console.log(update);
-    }
+  openDialogForm(){
+    this.dialogRef.open(ProductFormDialogComponent,{
+    });
   }
+
+  openUpdateForm(product : Product){
+    const dialogRef = this.dialogRef.open(DetailProductDialogComponent);
+    dialogRef.componentInstance.product= product;
+ }
+
+  faPenToSquare = faPenToSquare;
+  faCirclePlus = faCirclePlus;
+  faTrashCan = faTrashCan;
 }

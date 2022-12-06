@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-
 
 import { HttpClient } from '@angular/common/http';
 import { Client } from 'src/app/interfaces/client.interface';
 import { ClientObserverService } from 'src/app/services/client/client-observer.service';
 import { ClientService } from 'src/app/services/client/client.service';
 
-import { faXmark, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-form-dialog',
@@ -19,7 +18,7 @@ export class FormDialogComponent {
   constructor(
     private http:HttpClient,
     private clientObserver: ClientObserverService,
-    private dialogRef : MatDialog
+    public dialogRef: MatDialogRef<FormDialogComponent>,
     ){}
 
   ngOnInit(): void {
@@ -61,6 +60,10 @@ export class FormDialogComponent {
         console.log(update);
     }
   }
+
+  closeDialog(): void {
+    this.dialogRef.close();
+  }
+
   faXmark = faXmark;
-  faUsers = faUsers;
 }

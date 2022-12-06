@@ -10,5 +10,5 @@ import { ProductObserverService } from 'src/app/services/product/product-observe
 })
 export class HomeComponent {
 
-    constructor(public clientObserver: ClientObserverService, public productObserver: ProductObserverService, public orderObserver: OrderObserverService){}
+  constructor(public clientObserver: ClientObserverService, public productObserver: ProductObserverService, public orderObserver: OrderObserverService) { }
 }

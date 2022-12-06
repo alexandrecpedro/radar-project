@@ -27,6 +27,8 @@ import { FormDialogComponent } from './components/form-dialog/form-dialog.compon
 import { UpdateFormComponent } from './components/update-form/update-form.component';
 import { ProductDialogComponent } from './components/product-dialog/product-dialog.component';
 import { ClientDialogComponent } from './components/client-dialog/client-dialog.component';
+import { ProductFormDialogComponent } from './components/product-form-dialog/product-form-dialog.component';
+import { DetailProductDialogComponent } from './components/detail-product-dialog/detail-product-dialog.component';
 
 registerLocaleData(ptBr);
 
@@ -48,6 +50,8 @@ registerLocaleData(ptBr);
     UpdateFormComponent,
     ProductDialogComponent,
     ClientDialogComponent,
+    ProductFormDialogComponent,
+    DetailProductDialogComponent,
   ],
   imports: [
     BrowserModule,
