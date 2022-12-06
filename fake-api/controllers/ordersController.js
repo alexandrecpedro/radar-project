@@ -11,7 +11,7 @@ module.exports = {
         const orders = await Order.findOrders();
         order.id = new Date().getTime();
         // order.id = orders.length + 1;
-        order.date = formatDate.format(new Date(), "DD-MM-YYYY HH:mm:ss");
+        order.date = new Date();
         Order.save(order);
         res.status(201).send(order);
     },
