@@ -53,7 +53,6 @@ O sistema foi desenvolvido em Angular, com as seguintes funcionalidades:
   <li>Página cadastro de pedidos dos clientes</li>
   <li>Página de fluxo de caixa, mostrando a movimentação do mês</li>
 </ul>
-<br>
 
 Para gravação das informações, criou-se uma API em Node.js e Express, com a persistência em disco com arquivo.json. Esta API foi integrada à aplicação frontend (Angular).
 </p>
