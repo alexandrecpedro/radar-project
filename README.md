@@ -57,7 +57,6 @@ O sistema foi desenvolvido em Angular, com as seguintes funcionalidades:
 Para gravação das informações, criou-se uma API em Node.js e Express, com a persistência em disco com arquivo.json. Esta API foi integrada à aplicação frontend (Angular).
 </p>
 </div>
-<br>
  
 <div id="technologies">
 <h2> 🛠 Tecnologias utilizadas </h2>
@@ -75,7 +74,6 @@ As seguintes tecnologias foram utilizadas para construção do projeto:<br><br>
 |            Framework de CSS (Frontend)           |         BOOTSTRAP         |       https://getbootstrap.com/                |
 |    Biblioteca de Componentes gráficos (UX/UI)     |        FONT AWESOME       |    https://fontawesome.com/                |
 |             Open source API (Testing)            |          POSTMAN          |      https://www.postman.com/                 |
-<br>
 
 <div align = 'center'>
   <h3>Backend | API</h3>
@@ -99,6 +97,7 @@ As seguintes tecnologias foram utilizadas para construção do projeto:<br><br>
   <img height =' 100px ' left='80px' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/>
   <br>
 </div>
+<br>
 
 <div id="development">
 <h2> 📓 Desenvolvimento </h2>
@@ -110,7 +109,6 @@ As seguintes tecnologias foram utilizadas para construção do projeto:<br><br>
   <li><bold>Em andamento<bold>: as tarefas que já estão sendo desenvolvidas</li>
   <li><bold>Concluído<bold>: as tarefas que foram cumpridas</li>
 </ul>
-<br>
 <p>
   <a href="https://trello.com/b/xMzUPteQ/projeto-radar" alt="Metodologia Kanban - quadro Trello"> Clique aqui para visualizar os cards.
   </a>
