@@ -17,8 +17,6 @@
 <br>
 
 <div align = 'center' justify-content = 'space-around' >
-| Descrição | Tela |
-| :------------: | :------------: |
   <img width="1604" alt=" NLW World Cup - Desktop" src="./frontend/src/assets/screens/screen1.png">
 </div>
 <br>
@@ -27,11 +25,11 @@
 <p></p>
 
 <p align="center">
- <a href="#theproject">O Projeto</a> •
- <a href="#target">Objetivo</a> •
- <a href="#technologies">Tecnologias utilizadas</a> •
- <a href="#development">Desenvolvimento</a> •
- <a href="#howtouse">Como utilizar</a>
+  <a href="#theproject">O Projeto</a> •
+  <a href="#target">Objetivo</a> •
+  <a href="#technologies">Tecnologias utilizadas</a> •
+  <a href="#development">Desenvolvimento</a> •
+  <a href="#howtouse">Como utilizar</a>
 </p>
 <br>
 
@@ -114,8 +112,12 @@ As seguintes tecnologias foram utilizadas para construção do projeto:<br><br>
 </ul>
 <br>
 <p>
- <a href="https://trello.com/b/xMzUPteQ/projeto-radar" alt="Metodologia Kanban - quadro Trello"> Clique aqui para visualizar os cards.
- </a>
+  <a href="https://trello.com/b/xMzUPteQ/projeto-radar" alt="Metodologia Kanban - quadro Trello"> Clique aqui para visualizar os cards.
+  </a>
+  <br>
+  <div align = 'center' justify-content = 'space-around' >
+    <img width="1604" alt=" Metodologia Kanban - quadro Trello" src="./frontend/src/assets/screens/ScreenTrello.png">
+  </div>
 </p>
 </div>
 <br>
