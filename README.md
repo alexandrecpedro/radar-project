@@ -118,7 +118,6 @@ As seguintes tecnologias foram utilizadas para construção do projeto:<br><br>
   </div>
 </p>
 </div>
-<br>
 
 <div id="howtouse">
 <h2>🧪 Como utilizar</h2>
