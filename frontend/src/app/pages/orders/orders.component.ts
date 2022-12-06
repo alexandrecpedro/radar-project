@@ -34,6 +34,7 @@ export class OrdersComponent implements OnInit{
   private productService: ProductService = {} as ProductService;
   private clientService: ClientService = {} as ClientService;
   public orders: Order[] | undefined= []
+  public orderslist: Order[] | undefined= []
 
   public isCreating: boolean = false;
   public isEdit: boolean = false;
@@ -52,6 +53,7 @@ export class OrdersComponent implements OnInit{
 
   public async getOrders(){
      this.orders = await this.orderService.getOrder(); 
+     this.orderslist = this.orders?.reverse();
   }
 
 

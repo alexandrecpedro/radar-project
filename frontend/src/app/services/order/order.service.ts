@@ -36,26 +36,26 @@ export class OrderService {
   }
 
   public async getOrder(): Promise<Order[] | undefined>{
-    let orders:Order[] | undefined = await firstValueFrom(this.http.get<Order[]>(`${environment.api}/orders`));
+    const orders:Order[] | undefined = await firstValueFrom(this.http.get<Order[]>(`${environment.api}/orders`));
     return orders;
   }
 
   public async getOrderById(id: number): Promise<{order: Order, orderProducts: OrderProduct[]} | undefined>{
-    let order:Order | undefined = await firstValueFrom(this.http.get<Order>(`${environment.api}/orders/${id}`));
-    let orderProduct: OrderProduct[] | undefined = await firstValueFrom(this.http.get<OrderProduct[]>(`${environment.api}/orders-products`));
+    const order:Order | undefined = await firstValueFrom(this.http.get<Order>(`${environment.api}/orders/${id}`));
+    const orderProduct: OrderProduct[] | undefined = await firstValueFrom(this.http.get<OrderProduct[]>(`${environment.api}/orders-products`));
     return {order, orderProducts:orderProduct.filter(product=> product.order_id==order?.id)};
   }
 
-  public async updateOrder(order: Order, orderProducts: OrderProduct[]): Promise<{order: Order, orderProducts: OrderProduct[]} | undefined>{
-    let newOrderProduct: OrderProduct[] ;
-    //let orderUpdate: Order | undefined =  await firstValueFrom(this.http.put<Order>(`${environment.api}/orders/${order.id}`, order));
-
-    orderProducts.map(async orderProduct=>{
-      let update =  await firstValueFrom(this.http.put<OrderProduct>(`${environment.api}/orders-products/${orderProduct.id}`, orderProduct ))
-      console.log(update);
-      //newOrderProduct.push(update);
-    });
-    return {order, orderProducts};
+  public async getOrderProduct():Promise<OrderProduct[] | undefined>{
+    let orderProduct: OrderProduct[] | undefined =  await firstValueFrom(this.http.get<OrderProduct[]>(`${environment.api}/orders-products`));
+    return orderProduct;
   }
+
+  public async getOrderProductByOrderId(orderId: number ):Promise<OrderProduct[] | undefined>{
+    let orderProduct: OrderProduct[] | undefined =  await firstValueFrom(this.http.get<OrderProduct[]>(`${environment.api}/orders-products`));
+    return orderProduct;
+  }
+
+
 
 }
