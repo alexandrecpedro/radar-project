@@ -1,4 +1,4 @@
-# Projeto Radar - Angular
+# Desafio Final - Angular (Código do Futuro)
 ## Grupo 1
 ### Equipe
 
