@@ -16,6 +16,11 @@ export class ClientService {
     return clients;
   }
 
+  public async getClientbyId(clientId: number): Promise<Client | undefined>{
+    let client:Client | undefined = await firstValueFrom(this.http.get<Client>(`${environment.api}/clients/${clientId}`));
+    return client;
+  }
+
   public async createClient(client: Client): Promise<Client | undefined>{
     let newClient:Client | undefined = await firstValueFrom(this.http.post<Client>(`${environment.api}/clients`, client));
     return newClient; 

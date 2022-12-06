@@ -1,1 +1,11 @@
-<p>cash-flow works!</p>
+<div class="container ">
+
+    <div class="row mx-auto grafico">
+        <canvas baseChart class="chart"
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [type]="barChartType"
+        (chartHover)="chartHovered($event)">
+</canvas>
+    </div>
+</div>

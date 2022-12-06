@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UpdateFormComponent } from './components/update-form/update-form.component';
 import { AuthGuard } from './guards/auth/auth.guard';
 import { EditPermissionGuard } from './guards/edit-permission/edit-permission.guard';
 import { FormLeaveGuard } from './guards/form-leave/form-leave.guard';
@@ -19,7 +20,7 @@ const routes: Routes = [
     canActivateChild: [EditPermissionGuard],
     children: [
       { path: '', redirectTo: 'update', pathMatch: 'full' },
-      { path: 'update', component: ClientsComponent, canDeactivate: [FormLeaveGuard] }
+      { path: 'update', component: UpdateFormComponent, canDeactivate: [FormLeaveGuard] }
     ]
   },
   { path: 'orders', component: OrdersComponent, canActivate: [AuthGuard] },
@@ -27,8 +28,8 @@ const routes: Routes = [
     path: 'orders/:id',
     canActivateChild: [EditPermissionGuard],
     children: [
-      { path: '', redirectTo: 'update', pathMatch: 'full' },
-      { path: 'update', component: OrdersComponent, canDeactivate: [FormLeaveGuard] }
+      { path: '', redirectTo: 'order', pathMatch: 'full' },
+      { path: 'order', component: OrdersComponent }
     ]
   },
   { path: 'products', component: ProductsComponent, canActivate: [AuthGuard] },
@@ -37,7 +38,7 @@ const routes: Routes = [
     canActivateChild: [EditPermissionGuard],
     children: [
       { path: '', redirectTo: 'update', pathMatch: 'full' },
-      { path: 'update', component: OrdersComponent, canDeactivate: [FormLeaveGuard] }
+      { path: 'update', component: ProductsComponent, canDeactivate: [FormLeaveGuard] }
     ]
   },
   { path: 'cash-flow', component: CashFlowComponent, canActivate: [AuthGuard] }

@@ -1,7 +1,7 @@
 export interface Order {
     id :Number,
-    client_id :Number,
-    total_value :Number,
+    client_id :number,
+    total_value :number,
     date : Date
 }
 export interface OrderProduct {

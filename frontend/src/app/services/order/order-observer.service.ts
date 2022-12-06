@@ -22,10 +22,11 @@ export class OrderObserverService {
    async updateQty(){
     let list = await new OrderService(this.http).getOrder();
     this.orderQty = list ? list.length : 0;
-
   }
 
-
+  updateStock(index: number, newStock: number){
+    this.productsOrdered[index].product.stockQty = Number(this.productsOrdered[index].product.stockQty) + newStock;
+  }
   delete(newOrderedProducts:  {product: Product, qty: number}[]){
     this.productsOrdered = newOrderedProducts;
   }
@@ -37,12 +38,12 @@ export class OrderObserverService {
 
  public setProducts(product: Product){
     this.productsOrdered.push({product, qty: 1});
+    
   }
 
   public setClient(client: Client){
     this.orderClient = client;
     this.profileMock = this.orderClient.name.charAt(0);
-  
   }
 
   public sumValue(): number{

@@ -28,6 +28,8 @@ import { UpdateFormComponent } from './components/update-form/update-form.compon
 import { ProductDialogComponent } from './components/product-dialog/product-dialog.component';
 import { ClientDialogComponent } from './components/client-dialog/client-dialog.component';
 
+import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
+
 registerLocaleData(ptBr);
 
 
@@ -57,10 +59,12 @@ registerLocaleData(ptBr);
     FontAwesomeModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    NgChartsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
-    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' }
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
+    { provide: NgChartsConfiguration, useValue: { generateColors: false }}
   ],
   bootstrap: [AppComponent]
 })

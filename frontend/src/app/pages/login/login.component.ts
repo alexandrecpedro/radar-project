@@ -20,7 +20,8 @@ export class LoginComponent implements OnInit {
     console.log(this.email)
     if (this.email === "radar@login.com" && this.senha === "12345") {
       localStorage.setItem("logged", "true");
-      this.router.navigateByUrl("/");
+      localStorage.setItem("adm", "true");
+      this.router.navigateByUrl("");
     }
 
     else {

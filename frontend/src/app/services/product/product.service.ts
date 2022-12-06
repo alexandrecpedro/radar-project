@@ -16,6 +16,11 @@ export class ProductService {
     return products;
   }
 
+  public async getProductById(id: number): Promise<Product | undefined>{
+    let product:Product | undefined = await firstValueFrom(this.http.get<Product>(`${environment.api}/products/${id}`));
+    return product;
+  }
+
   public async createProduct(product: Product): Promise<Product | undefined>{
     let newProduct:Product | undefined = await firstValueFrom(this.http.post<Product>(`${environment.api}/products`, product));
     return newProduct; 
@@ -28,6 +33,7 @@ export class ProductService {
   public async updateProduct(product: Product): Promise<Product | undefined>{
     let ProductUpdate: Product | undefined = await firstValueFrom(this.http.put<Product>(`${environment.api}/Products/${product.id}`, product ));
     return ProductUpdate;
-
   }
+
+
 }

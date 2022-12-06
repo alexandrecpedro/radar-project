@@ -20,14 +20,41 @@ export class ProductDialogComponent implements OnInit{
   products: Product[] | undefined= [];
   orderedProducts: Product[] | undefined = [];
   product: Product = {} as Product;
+  pages: number[] = [];
+  start:number = 0;
+  end:number = 8;
 
   ngOnInit():void{
     this.productService = new ProductService(this.http);
     this.getProducts();
+    
   }
   private async getProducts(){
     this.products = await this.productService.getProduct();
+    this.getPageNumber();
   }
+
+  public getPageNumber(){
+    if(this.products){
+      let npages = Math.ceil(this.products.length / 8);
+      for(let i=1; i<=npages;i++){
+        this.pages.push(i);
+      }
+    }
+  }
+
+  nextPage(){
+    if(this.products && this.end >= this.products.length) return;
+    this.start += 8;
+    this.end +=8;
+  }
+
+  previousPage(){
+    if(this.start<=0) return;
+    this.start -= 8;
+    this.end -=8;
+  }
+
 
   selectProduct(product: Product){
     this.orderObserver.setProducts(product);
