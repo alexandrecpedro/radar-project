@@ -17,14 +17,40 @@
 <br>
 
 <div align = 'center' justify-content = 'space-around' >
-| Descrição da imagem | Tela |
-| :------------: | :------------: |
-| Página de login | <img width="600px" alt=" Página de Login" src="./frontend/src/assets/screens/login.png"> |
-| Página home | <img width="600px" alt=" Página Home" src="./frontend/src/assets/screens/home.png"> |
-| Página de cadastro de produtos | <img width="600px" alt=" Página de cadastro de produtos" src="./frontend/src/assets/screens/produtos.png"> |
-| Página cadastro de clientes | <img width="600px" alt=" Página cadastro de clientes" src="./frontend/src/assets/screens/Clientes.png"> |
-| Página cadastro de pedidos dos clientes | <img width="600px" alt=" Página cadastro de pedidos dos clientes" src="./frontend/src/assets/screens/pedidos.png"> |
-| Página de fluxo de caixa, mostrando a movimentação do mês | <img width="600px" alt=" Página de fluxo de caixa, mostrando a movimentação do mês" src="./frontend/src/assets/screens/fluxo.png"> |
+<table>
+  <thead>
+    <tr>
+      <th>Descrição da imagem</th>
+      <th>Tela</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Página de login</td>
+      <td><img width="1604" alt=" Página de Login" src="./frontend/src/assets/screens/login.png"></td>
+    </tr>
+    <tr>
+      <td>Página Home</td>
+      <td><img width="1604" alt=" Página Home" src="./frontend/src/assets/screens/home.png"></td>
+    </tr>
+    <tr>
+      <td>Página de cadastro de produtos</td>
+      <td><img width="1604" alt=" Página de cadastro de produtos" src="./frontend/src/assets/screens/produtos.png"></td>
+    </tr>
+    <tr>
+      <td>Página cadastro de clientes</td>
+      <td><img width="1604" alt=" Página cadastro de clientes" src="./frontend/src/assets/screens/Clientes.png"></td>
+    </tr>
+    <tr>
+      <td>Página cadastro de pedidos dos clientes</td>
+      <td><img width="1604" alt=" Página cadastro de pedidos dos clientes" src="./frontend/src/assets/screens/pedidos.png"></td>
+    </tr>
+    <tr>
+      <td>Página de fluxo de caixa, mostrando a movimentação do mês</td>
+      <td><img width="1604" alt=" Página de fluxo de caixa, mostrando a movimentação do mês" src="./frontend/src/assets/screens/fluxo.png"></td>
+    </tr>
+  </tbody>
+</table>
 </div>
 <br>
 <br>
